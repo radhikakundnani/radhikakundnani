@@ -96,7 +96,8 @@ def sparkle(x, y, R, spin=False, color=INK):
     return f'<path d="{d}" fill="{color}">{anim}</path>'
 
 
-def ascii_skyline(seed, w, base, cw=9, ch=13, tower_col=None, size=12):
+def ascii_skyline(seed, w, base, cw=9, ch=13, tower_col=None, size=12, cap=None):
+    """cap(x) -> max building height (rows) at pixel x, so buildings stay below text."""
     rng = random.Random(seed)
     cols = int(w / cw)
     heights, c = [0] * cols, 0
@@ -105,6 +106,8 @@ def ascii_skyline(seed, w, base, cw=9, ch=13, tower_col=None, size=12):
         for k in range(c, min(cols, c + bw)):
             heights[k] = bh
         c += bw + rng.choice([0, 1, 1, 2])
+    if cap:
+        heights = [min(h, cap(k * cw)) for k, h in enumerate(heights)]
     lines = []
     for r in range(max(heights) + 1, 0, -1):
         s = []
@@ -141,7 +144,7 @@ def banner():
 <rect width="{W}" height="{H}" fill="url(#grid)"/>
 {halftone(3, W, H, mask=clear)}
 {ascii_sky(7, W, H - 70, mask=clear)}
-{ascii_skyline(5, W, H, tower_col=112)}
+{ascii_skyline(5, W, H, tower_col=112, cap=lambda x: 4 if x < 700 else 99)}
 {sparkle(1080, 92, 46, spin=True)}{sparkle(760, 150, 18)}{sparkle(880, 300, 24, spin=True)}{sparkle(680, 60, 9)}
 <text x="60" y="92" font-family="{MONO}" font-size="13" letter-spacing="2.5" fill="{GREY}">~/radhika · bangalore</text>
 <text x="56" y="200" font-family="dt" font-size="104" fill="{INK}">radhika</text>
@@ -177,7 +180,7 @@ def footer():
 <rect width="{W}" height="{H}" rx="14" fill="url(#grid)"/>
 {halftone(21, W, H, mask=clear)}
 {ascii_sky(17, W, H - 60, mask=clear)}
-{ascii_skyline(9, W, H, tower_col=118)}
+{ascii_skyline(9, W, H, tower_col=118, cap=lambda x: 6 if 230 < x < 970 else 99)}
 {sparkle(150, 80, 30, spin=True)}{sparkle(1040, 70, 16)}
 <text x="{W / 2}" y="125" text-anchor="middle" font-family="dt" font-size="68" fill="{INK}">let's make something.</text>
 <text x="{W / 2}" y="170" text-anchor="middle" font-family="dt" font-size="26" fill="{INK}" opacity=".75">radhikakundnani1@gmail.com</text>
