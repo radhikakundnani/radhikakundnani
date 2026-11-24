@@ -76,7 +76,7 @@
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com?user=radhikakundnani&background=eeede8&border=dcdbd5&ring=9cc3df&fire=111111&currStreakLabel=111111&sideLabels=111111&dates=7d7c78&stroke=dcdbd5&currStreakNum=111111&sideNums=111111" alt="github streak" height="160">
   <br>
-  <sub>"daily" is doing a lot of heavy lifting here. still a beginner, still showing up ✦</sub>
+  <sub>"daily" is more of a vibe right now. it's growing ✦</sub>
 </p>
 
 <p align="center">
