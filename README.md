@@ -30,6 +30,8 @@
     <b>lately</b> · ai engineering intern @ mindmap digital &nbsp;·&nbsp; design lead @ gdg on campus vit &nbsp;·&nbsp; freelance design for founders
     <br>
     <b>now</b> · open to internships & new-grad roles · building ai agents and practising dsa
+    <br>
+    <b>for fun</b> · i collect design inspiration on <a href="https://in.pinterest.com/qtfrootie/">pinterest</a>
   </sub>
 </p>
 
