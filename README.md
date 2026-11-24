@@ -3,24 +3,26 @@
 </p>
 
 <p align="center">
-  <a href="https://radhikakundnani.github.io/"><img src="https://img.shields.io/badge/portfolio-06060c?style=for-the-badge&logo=googlechrome&logoColor=c7b8ff" alt="portfolio"></a>
-  <a href="https://linkedin.com/in/radhika-kundnani"><img src="https://img.shields.io/badge/linkedin-06060c?style=for-the-badge&logo=linkedin&logoColor=c7b8ff" alt="linkedin"></a>
-  <a href="mailto:radhikakundnani1@gmail.com"><img src="https://img.shields.io/badge/say%20hi-06060c?style=for-the-badge&logo=gmail&logoColor=c7b8ff" alt="say hi"></a>
+  <a href="https://radhikakundnani.github.io/"><img src="https://img.shields.io/badge/portfolio-0d2340?style=for-the-badge&logo=googlechrome&logoColor=9fd0ff" alt="portfolio"></a>
+  <a href="https://linkedin.com/in/radhika-kundnani"><img src="https://img.shields.io/badge/linkedin-0d2340?style=for-the-badge&logo=linkedin&logoColor=9fd0ff" alt="linkedin"></a>
+  <a href="mailto:radhikakundnani1@gmail.com"><img src="https://img.shields.io/badge/say%20hi-0d2340?style=for-the-badge&logo=gmail&logoColor=9fd0ff" alt="say hi"></a>
 </p>
 
 ```text
-   ✦        .          *        .                 .        *
-        .        radhika@vit:~$ whoami                .
-   *         >  a cs student at vit vellore who could never pick
-                between designing things and building them,
-       .        so i do both.                          *     .
-            >  i like turning messy, manual work into ai that
-   .            just handles it, and making it feel nice to use.
-        *    >  currently in bangalore, mostly in figma or a terminal.
-                                                      .
-   .        radhika@vit:~$ ls ./life                 *
-            ai-agents/   design/   products/   research/   space/
-        *                        .                         ✦
+        .--.                        \ | /               .--.
+     .-(    ).          .--.       -- ☀ --          .-(    ).
+    (___.__)__)      .-(    ).      / | \          (___.__)__)
+                    (___.__)__)            ~ 14:40, somewhere high up
+
+  radhika@vit:~$ whoami
+  > a cs student at vit vellore who could never pick between
+    designing things and building them, so i do both.
+  > i like turning messy, manual work into ai that just handles it,
+    and making it feel nice to use.
+  > happiest somewhere high up, looking at a city from the clouds.
+
+  radhika@vit:~$ ls ./life
+  ai-agents/   design/   products/   research/   views/
 ```
 
 <p align="center">
@@ -70,7 +72,7 @@
 <img src="assets/h-signal.svg" width="100%" alt="showing up daily">
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=radhikakundnani&theme=dark&background=06060c&border=1f1d33&ring=6c63ff&fire=c7b8ff&currStreakLabel=c7b8ff&sideLabels=ecebff&dates=8f8bb3&stroke=1f1d33&currStreakNum=ffffff&sideNums=ffffff" alt="github streak" height="160">
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=radhikakundnani&background=e3f0fd&border=9fc8f0&ring=3f8fe0&fire=ff9d2e&currStreakLabel=0d2340&sideLabels=0d2340&dates=5d7593&stroke=9fc8f0&currStreakNum=0d2340&sideNums=0d2340" alt="github streak" height="160">
 </p>
 
 <p align="center">
