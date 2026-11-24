@@ -1,7 +1,7 @@
 """Generates the profile's SVG art in the Trap typeface (fonts embedded, so GitHub renders them).
 Deterministic (seeded) stars. Run: python3 assets/make_svgs.py
 
-Font: trap* by Aayush Mayank (@aayushmayank), free for personal and commercial use."""
+Display font: Dotemp 8bit (demo)."""
 import base64
 import math
 import random
@@ -19,7 +19,9 @@ MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
 
 def font_face(name, file):
     data = base64.b64encode((FONTS / file).read_bytes()).decode()
-    return f"@font-face{{font-family:'{name}';src:url(data:font/otf;base64,{data}) format('opentype');}}"
+    fmt = 'truetype' if file.endswith('.ttf') else 'opentype'
+    mime = 'font/ttf' if file.endswith('.ttf') else 'font/otf'
+    return f"@font-face{{font-family:'{name}';src:url(data:{mime};base64,{data}) format('{fmt}');}}"
 
 
 def defs(*faces):
@@ -72,24 +74,25 @@ def planet(cx, cy, r, ring_rx, ring_ry, tilt):
 
 
 def banner():
-    W, H = 1200, 380
+    W, H = 1200, 400
     rng = random.Random(27)
-    cx, cy = 930, 175
-    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="hi, i'm radhika kundnani: ai engineering, product and design">
-{defs(("trapblack", "Trap-Black.otf"), ("trapreg", "Trap-Regular.otf"))}
+    cx, cy = 960, 175
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="radhika kundnani. designer or developer? yes.">
+{defs(("dt", "dotemp-8bit.ttf"))}
 <rect width="{W}" height="{H}" fill="{BG}"/>
 <rect width="{W}" height="{H}" fill="url(#haze)"/>
-{stars(rng, W, H, 280)}
-{dot_cloud(rng, cx, cy, 300, 140, 1100, INDIGO)}
-{dot_cloud(rng, cx, cy, 160, 80, 420, LILAC)}
+{stars(rng, W, H, 300)}
+{dot_cloud(rng, cx, cy, 290, 140, 1100, INDIGO)}
+{dot_cloud(rng, cx, cy, 150, 75, 420, LILAC)}
 <g transform="rotate(-14 {cx} {cy})">{planet(cx, cy, 38, 220, 50, 0)}</g>
-<text x="70" y="88" font-family="trapreg" font-size="30" fill="{LILAC}">hi, i'm</text>
-<text x="66" y="178" font-family="trapblack" font-size="104" fill="{WHITE}" letter-spacing="-2">radhika</text>
-<text x="66" y="272" font-family="trapblack" font-size="104" fill="{WHITE}" letter-spacing="-2">kundnani<tspan fill="{INDIGO}">.</tspan></text>
-<text x="70" y="318" font-family="trapreg" font-size="28" fill="{LILAC}">ai engineering · product · design</text>
-<text x="71" y="350" font-family="{MONO}" font-size="14" letter-spacing="2.5" fill="{DIM}">cs @ vit vellore · bangalore · open to roles</text>
-<rect x="1110" y="330" width="10" height="10" fill="none" stroke="{LILAC}"/>
-<text x="1060" y="358" font-family="{MONO}" font-size="12" letter-spacing="3" fill="{DIM}">awaken</text>
+<circle cx="78" cy="70" r="5" fill="{LILAC}"><animate attributeName="opacity" values="1;.2;1" dur="2.4s" repeatCount="indefinite"/></circle>
+<text x="94" y="75" font-family="{MONO}" font-size="14" letter-spacing="2.5" fill="{DIM}">~/radhika · online</text>
+<text x="68" y="190" font-family="dt" font-size="96" fill="{WHITE}" filter="url(#glow)">radhika</text>
+<text x="68" y="282" font-family="dt" font-size="96" fill="{WHITE}" filter="url(#glow)">kundnani<tspan fill="{INDIGO}">.</tspan></text>
+<text x="72" y="336" font-family="dt" font-size="34" fill="{LILAC}">designer or developer? yes.</text>
+<text x="73" y="370" font-family="{MONO}" font-size="13" letter-spacing="2.5" fill="{DIM}">ai engineering · product · design · bangalore</text>
+<rect x="1110" y="342" width="10" height="10" fill="none" stroke="{LILAC}"/>
+<text x="1062" y="372" font-family="{MONO}" font-size="12" letter-spacing="3" fill="{DIM}">awaken</text>
 </svg>'''
     (OUT / "banner.svg").write_text(svg)
 
@@ -101,10 +104,10 @@ def header(slug, title, index):
         f'<rect x="{x}" y="78" width="3" height="3" fill="{rng.choice([INDIGO, LILAC, WHITE])}" opacity="{rng.uniform(.25, .9):.2f}"/>'
         for x in range(40, W - 40, 10))
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="{title}">
-{defs(("trapbold", "Trap-Bold.otf"))}
+{defs(("dt", "dotemp-8bit.ttf"))}
 <rect width="{W}" height="{H}" rx="14" fill="{BG}"/>
 {stars(rng, W, H, 70, 5)}
-<text x="40" y="58" font-family="trapbold" font-size="40" fill="{WHITE}"><tspan fill="{LILAC}">✦ </tspan>{title}</text>
+<text x="40" y="58" font-family="dt" font-size="42" fill="{WHITE}"><tspan fill="{LILAC}">✦ </tspan>{title}</text>
 <text x="{W - 40}" y="58" text-anchor="end" font-family="{MONO}" font-size="15" letter-spacing="3" fill="{DIM}">{index} □</text>
 {dots}
 </svg>'''
@@ -112,24 +115,24 @@ def header(slug, title, index):
 
 
 def footer():
-    W, H = 1200, 220
+    W, H = 1200, 230
     rng = random.Random(9)
-    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="let's build something.">
-{defs(("trapblack", "Trap-Black.otf"), ("trapreg", "Trap-Regular.otf"))}
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="let's make something.">
+{defs(("dt", "dotemp-8bit.ttf"))}
 <rect width="{W}" height="{H}" rx="14" fill="{BG}"/>
 {stars(rng, W, H, 160, 5)}
 {dot_cloud(rng, W / 2, 110, 420, 70, 500, INDIGO, grid=7)}
-<text x="{W / 2}" y="118" text-anchor="middle" font-family="trapblack" font-size="64" fill="{WHITE}" letter-spacing="-1">let's build something<tspan fill="{INDIGO}">.</tspan></text>
-<text x="{W / 2}" y="160" text-anchor="middle" font-family="trapreg" font-size="22" fill="{LILAC}">radhikakundnani1@gmail.com</text>
-<text x="{W / 2}" y="200" text-anchor="middle" font-family="{MONO}" font-size="11" letter-spacing="2" fill="{DIM}">type: trap* by @aayushmayank</text>
+<text x="{W / 2}" y="118" text-anchor="middle" font-family="dt" font-size="66" fill="{WHITE}" filter="url(#glow)">let's make something<tspan fill="{INDIGO}">.</tspan></text>
+<text x="{W / 2}" y="165" text-anchor="middle" font-family="dt" font-size="26" fill="{LILAC}">radhikakundnani1@gmail.com</text>
+<text x="{W / 2}" y="205" text-anchor="middle" font-family="{MONO}" font-size="11" letter-spacing="2" fill="{DIM}">made with stardust &amp; too many figma tabs □</text>
 </svg>'''
     (OUT / "footer.svg").write_text(svg)
 
 
 banner()
-header("built", "things i've built", "01")
-header("stack", "what i work with", "02")
-header("signal", "signal", "03")
+header("built", "things i've made", "01")
+header("stack", "my toolbox", "02")
+header("signal", "showing up daily", "03")
 footer()
 for old in ("divider.svg",):
     (OUT / old).unlink(missing_ok=True)
