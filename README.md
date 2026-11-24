@@ -3,16 +3,16 @@
 </p>
 
 <p align="center">
-  <a href="https://radhikakundnani.github.io/"><img src="https://img.shields.io/badge/portfolio-0d2340?style=for-the-badge&logo=googlechrome&logoColor=9fd0ff" alt="portfolio"></a>
-  <a href="https://linkedin.com/in/radhika-kundnani"><img src="https://img.shields.io/badge/linkedin-0d2340?style=for-the-badge&logo=linkedin&logoColor=9fd0ff" alt="linkedin"></a>
-  <a href="mailto:radhikakundnani1@gmail.com"><img src="https://img.shields.io/badge/say%20hi-0d2340?style=for-the-badge&logo=gmail&logoColor=9fd0ff" alt="say hi"></a>
+  <a href="https://radhikakundnani.github.io/"><img src="https://img.shields.io/badge/portfolio-111111?style=for-the-badge&logo=googlechrome&logoColor=eeede8" alt="portfolio"></a>
+  <a href="https://linkedin.com/in/radhika-kundnani"><img src="https://img.shields.io/badge/linkedin-111111?style=for-the-badge&logo=linkedin&logoColor=eeede8" alt="linkedin"></a>
+  <a href="mailto:radhikakundnani1@gmail.com"><img src="https://img.shields.io/badge/say%20hi-111111?style=for-the-badge&logo=gmail&logoColor=eeede8" alt="say hi"></a>
 </p>
 
 ```text
-        .--.                        \ | /               .--.
-     .-(    ).          .--.       -- ☀ --          .-(    ).
-    (___.__)__)      .-(    ).      / | \          (___.__)__)
-                    (___.__)__)            ~ 14:40, somewhere high up
+         .  :  ;  -=+*%#@  cloud.txt              ✦
+     .-~~~-.            .-~~~~-.        ,                .-~~-.
+   (  .  :  )~-.     (  :  =  +  )    *  .   ✦        (  . : )
+    `~~~~~~~~~'       `~~~~~~~~~'                    `~~~~~'
 
   radhika@vit:~$ whoami
   > a cs student at vit vellore who could never pick between
@@ -72,7 +72,7 @@
 <img src="assets/h-signal.svg" width="100%" alt="showing up daily">
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=radhikakundnani&background=e3f0fd&border=9fc8f0&ring=3f8fe0&fire=ff9d2e&currStreakLabel=0d2340&sideLabels=0d2340&dates=5d7593&stroke=9fc8f0&currStreakNum=0d2340&sideNums=0d2340" alt="github streak" height="160">
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=radhikakundnani&background=eeede8&border=dcdbd5&ring=9cc3df&fire=111111&currStreakLabel=111111&sideLabels=111111&dates=7d7c78&stroke=dcdbd5&currStreakNum=111111&sideNums=111111" alt="github streak" height="160">
 </p>
 
 <p align="center">
