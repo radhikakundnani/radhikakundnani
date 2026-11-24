@@ -143,7 +143,7 @@ def banner():
 {ascii_sky(7, W, H - 70, mask=clear)}
 {ascii_skyline(5, W, H, tower_col=112)}
 {sparkle(1080, 92, 46, spin=True)}{sparkle(760, 150, 18)}{sparkle(880, 300, 24, spin=True)}{sparkle(680, 60, 9)}
-<text x="60" y="92" font-family="{MONO}" font-size="13" letter-spacing="2.5" fill="{GREY}">~/radhika · somewhere above the city</text>
+<text x="60" y="92" font-family="{MONO}" font-size="13" letter-spacing="2.5" fill="{GREY}">~/radhika · bangalore</text>
 <text x="56" y="200" font-family="dt" font-size="104" fill="{INK}">radhika</text>
 <text x="56" y="298" font-family="dt" font-size="104" fill="{INK}">kundnani.</text>
 <text x="60" y="350" font-family="dt" font-size="34" fill="{INK}" opacity=".8">designer or developer? yes.</text>

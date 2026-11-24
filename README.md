@@ -15,21 +15,21 @@
     `~~~~~~~~~'       `~~~~~~~~~'                    `~~~~~'
 
   radhika@vit:~$ whoami
-  > a cs student at vit vellore who could never pick between
-    designing things and building them, so i do both.
-  > i like turning messy, manual work into ai that just handles it,
-    and making it feel nice to use.
-  > happiest somewhere high up, looking at a city from the clouds.
+  > cs undergrad at vit vellore (class of 2027), based in bangalore.
+  > i build ai automations and full-stack web apps, and design the
+    interfaces for them too.
+  > interned as an ai engineer at mindmap digital, building llm
+    workflows and an email agent for sales teams.
 
-  radhika@vit:~$ ls ./life
-  ai-agents/   design/   products/   research/   views/
+  radhika@vit:~$ ls ./work
+  ai-agents/   full-stack/   ui-ux-design/   ml-research/
 ```
 
 <p align="center">
   <sub>
     <b>lately</b> · ai engineering intern @ mindmap digital &nbsp;·&nbsp; design lead @ gdg on campus vit &nbsp;·&nbsp; freelance design for founders
     <br>
-    <b>now</b> · open to internships & new-grad roles · building agents, practising dsa, saying yes to good problems
+    <b>now</b> · open to internships & new-grad roles · building ai agents and practising dsa
   </sub>
 </p>
 
